@@ -7,7 +7,8 @@ on:
     types: started
   workflow_dispatch:
   schedule:
-    - cron: 35 2 * * *
+    - cron: "0 */12 * * *"
+    # 每天在 0:00（午夜）和 12:00（中午） 整点运行
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
